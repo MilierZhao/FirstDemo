@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="p1" extends="struts-default">
+	
+		<action name="Check" class="com.Login.Check_User">
+			<result name="success"  type= "redirectAction">Manage</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		
+		<action name="InsertUser" class="com.Login.InsertUserAction">
+			<result name="success">/login.jsp</result>
+		</action>
+		
+		<action name="Manage" class="com.Manage.Sql_Con">
+			<result name="success">/first.jsp</result>
+		</action>
+		
+		<action name="Show" class="com.Manage.Sql_Con">
+			<result name="success">/index.jsp</result>
+		</action>
+		
+		<action name="update2" class="com.Manage.Update">
+			<result name="success"  type= "redirectAction">Manage</result> 
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="delete" class="com.Manage.Delete">
+			<result name="success">succe.jsp</result>
+		</action>
+		
+		<action name="my2" class="com.Manage.My2">
+			<result name="success">../my2.jsp</result>
+		</action>
+		
+		<action name="first" class="com.Manage.Sql_Con">
+			<result name="success">../first.jsp</result>
+		</action>
+		
+		<action name="insert" class="com.Manage.Insert">
+			<result name="success"  type= "redirectAction">Manage</result>    
+		</action>
+	</package>
+</struts>
